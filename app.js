@@ -190,3 +190,64 @@ red.hsl();
 red.opposite();
 red.rgba(0.3);
 const white = new Color(255, 255, 255, 'white');
+
+
+// class Cat {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   eat() {
+//     return `${this.name} is eating!`;
+//   }
+//   meow() {
+//     return 'MEOOW';
+//   }
+// }
+
+// class Dog {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   eat() {
+//     return `${this.name} is eating!`;
+//   }
+//   bark() {
+//     return 'WOOF';
+//   }
+// }
+
+// how to re write the above code for classes that share the same features
+class Pet {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    return `${this.name} is eating!`;
+  }
+  meow
+}
+
+class Cat extends Pet {
+  // if you wanted to add more to the constructor you can use super.
+  constructor(name, age, livesLeft = 9) {
+    // super is a reference to the super class aka the parent class which is Pet in this example
+    super(name, age);
+    this.livesLeft = livesLeft;
+  }
+  meow() {
+    return 'MEOOW';
+  }
+}
+
+class Dog extends Pet {
+  bark() {
+    return 'WOOF';
+  }
+  eat() {
+    // there is an eat method in the Pet class however it checks if the Dog class has an eat method first and then if it didnt it would go to the Pet class.
+    return `${this.name} inhales his food`;
+  }
+}
