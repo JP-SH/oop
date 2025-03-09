@@ -251,3 +251,12 @@ class Dog extends Pet {
     return `${this.name} inhales his food`;
   }
 }
+
+class Gorilla extends Pet {
+  beatsChest() {
+    return 'THUMP THUMP THUMP';
+  }
+  eat() {
+    return `${this.name} demolishes his food`;
+  }
+}
